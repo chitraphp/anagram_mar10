@@ -3,7 +3,13 @@ class Anagram
 {
     function makeAnagram($input)
     {
-        return $input;
+        $output = array();
+        $output = $input;
+        return $output;
     }
+
+
+
+
 }
 ?>

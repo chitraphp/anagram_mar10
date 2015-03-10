@@ -1,0 +1,22 @@
+Anagram Specs:
+
+1.  Input: should be one single word "cow"
+    Output: should display the input "cow"
+
+2.  Input: should be list of words
+    Output: should display the input
+
+3.  Input: one single word
+    Behavior: make an array of the letters of the input word
+    Output: letters of the word separated into an array
+
+4.  Input: list of words from user input
+    Behavior: make separate arrays of letters for each word entered in the list
+    Output: list of each word's array of letters
+
+5.  Input: single word's letters array and each array from word list
+    Behavior: compare single word array to each word list array
+    Output: matched letter arrays
+
+6.  Input: matched letter arrays
+    Behavior/Output: should display initial user input and list, and also matching arrays(anagrams)
