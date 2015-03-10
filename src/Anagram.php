@@ -1,11 +1,18 @@
 <?php
 class Anagram
 {
-    function makeAnagram($input)
+    function anagramCheck($main_word, $array_to_compare)
     {
-        $output = array();
-        $output = $input;
-        return $output;
+        $results = array();
+        if(in_array($main_word, $array_to_compare))
+        {
+            array_push($results, true);
+        }
+        else
+        array_push($results, false);
+
+        return $results;
+
     }
 
 

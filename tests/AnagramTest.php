@@ -5,39 +5,18 @@
         //User inputs single word.
         //Output will display back user entry.
 
-        function  test_diplay_user_input()
+        function test_Match_letters_true()
         {
-            //Arrange
-            $test_Anagram = new Anagram();
-            $input = array();
-            $input = ["cow"];
+        //Arrange
+        $test_Anagram = new Anagram;
+        $input1 = "a";
+        $input2 = array("a");
 
+        //Act
+        $result = $test_Anagram->anagramCheck($input1, $input2);
 
-            //Act
-            $result = $test_Anagram->makeAnagram($input);
-
-            //Assert
-            $this->assertEquals($input, $result);
-
-        }
-
-
-        //Input: User input word.
-        //Output: will compare to user list.
-        function test_compare_user_list()
-        {
-            //Arrange
-            $test_Anagram = new Anagram();
-            $input = array();
-            $input = ["cow"];
-            $list_of_words = array();
-            $list_of_words = ["cow"];
-
-            //Act
-            $result = $test_Anagram->makeAnagram($input);
-
-            //Assert
-            $this->assertEquals($list_of_words, $result);
+        //Assert
+        $this->assertEquals(array(true), $result);
         }
     }
 ?>
