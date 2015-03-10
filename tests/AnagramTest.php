@@ -5,7 +5,7 @@
         //User inputs single word.
         //Output will display back user entry.
 
-        function test_Match_letters_true()
+        function test_match_letters_true()
         {
         //Arrange
         $test_Anagram = new Anagram();
@@ -20,7 +20,7 @@
         }
 
 
-        function test_Match_letters_false()
+        function test_match_letters_false()
         {
         //Arrange
         $test_Anagram = new Anagram();
@@ -34,7 +34,7 @@
         $this->assertEquals(array(false), $result);
         }
 
-        function test_Match_two_letters()
+        function test_match_two_letters()
         {
         //Arrange
         $test_Anagram = new Anagram;
@@ -46,6 +46,34 @@
 
         //Assert
         $this->assertEquals(array(true,false), $result);
+        }
+
+        function test_match_words()
+        {
+        //Arrange
+        $test_Anagram = new Anagram;
+        $input1 = "bread";
+        $input2 = array("beard");
+
+        //Act
+        $result = $test_Anagram->anagramCheck($input1, $input2);
+
+        //Assert
+        $this->assertEquals(array(false), $result);
+        }
+
+        function test_match_two_words()
+        {
+        //Arrange
+        $test_Anagram = new Anagram;
+        $input1 = "bread";
+        $input2 = array("beard", "bread");
+
+        //Act
+        $result = $test_Anagram->anagramCheck($input1, $input2);
+
+        //Assert
+        $this->assertEquals(array(false, true), $result);
         }
     }
 ?>
