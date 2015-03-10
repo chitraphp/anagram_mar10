@@ -75,5 +75,33 @@
         //Assert
         $this->assertEquals(array(false, true), $result);
         }
+
+        function test_match_letters_in_words()
+        {
+        //Arrange
+        $test_Anagram = new Anagram;
+        $input1 = "post";
+        $input2 = array("stop");
+
+        //Act
+        $result = $test_Anagram->anagramCheck($input1, $input2);
+
+        //Assert
+        $this->assertEquals(array(true), $result);
+        }
+
+        function test_match_letters_in_multiple_words()
+        {
+        //Arrange
+        $test_Anagram = new Anagram;
+        $input1 = "post";
+        $input2 = array("stop", "go", "pots", "beard");
+
+        //Act
+        $result = $test_Anagram->anagramCheck($input1, $input2);
+
+        //Assert
+        $this->assertEquals(array(true, false, true, false), $result);
+        }
     }
 ?>
